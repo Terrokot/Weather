@@ -32,14 +32,12 @@ class LocationService: NSObject {
     func getLocation() {
         manager.requestLocation()
     }
-
-    
 }
 
 extension LocationService: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.sorted(by: { $0.timestamp > $1.timestamp } ).first {
+        if let location = locations.sorted(by: { $0.timestamp > $1.timestamp }).first {
             self.newestLocation?(location.coordinate)
         } else {
             self.newestLocation?(nil)

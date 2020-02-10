@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct API {
+    static let apiKey: String = "fd56c5c69f6ff8567bf14ef3c8072423"    
+    static let baseURL = "https://api.darksky.net"
+}

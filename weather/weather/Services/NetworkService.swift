@@ -23,9 +23,7 @@ final class NetworkService: Networking {
     
     func testrequest() {
         request("https://api.darksky.net/forecast/fd56c5c69f6ff8567bf14ef3c8072423/53.902791,27.558383").responseJSON { (response) in
-            print(response)
+           print(response)
         }
     }
-    
-    
 }
