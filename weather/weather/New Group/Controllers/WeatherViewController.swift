@@ -41,7 +41,6 @@ class WeatherViewController: UIViewController {
             }
         }
     }
-   
 }
 
 extension WeatherViewController: UITableViewDataSource {
