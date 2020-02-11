@@ -110,7 +110,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LOADING" largeTitleDisplayMode="always" id="SBn-Fk-yZ0"/>
+                    <navigationItem key="navigationItem" title="LOADING" largeTitleDisplayMode="never" id="SBn-Fk-yZ0"/>
                     <connections>
                         <outlet property="locationBar" destination="SBn-Fk-yZ0" id="YKP-9n-hVM"/>
                         <outlet property="tableView" destination="jUp-C1-gJp" id="UeD-Vo-4TR"/>

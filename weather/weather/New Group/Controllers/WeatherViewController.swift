@@ -39,6 +39,7 @@ class WeatherViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startPresentation()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.40, green:0.51, blue:0.66, alpha:1.0)
     }
     
     func startPresentation() {
