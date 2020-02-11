@@ -14,6 +14,13 @@ import Alamofire
 class WeatherViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var locationBar: UINavigationItem!
+    
+       var viewModels: [DailyForecastCellModel] = [] {
+           didSet {
+               tableView.reloadData()
+           }
+       }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -34,12 +41,7 @@ class WeatherViewController: UIViewController {
             }
         }
     }
-    
-    var viewModels: [DailyForecastCellModel] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+   
 }
 
 extension WeatherViewController: UITableViewDelegate {
@@ -54,7 +56,7 @@ extension WeatherViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath) as! DailyForecastTableViewCell
         let vm = viewModels[indexPath.row]
         cell.forecastImageView.image = vm.image
-        cell.temperatureLabel.text = "\(vm.low - 32) - \(vm.high - 32)ºC"
+        cell.temperatureLabel.text = "\(vm.low - 32) ... \(vm.high - 32)ºC"
         cell.dayLabel.text = vm.dayOfTheWeek
         return cell
     }

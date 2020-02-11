@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let viewModels = forecast?.daily.data.compactMap(DailyForecastCellModel.init) ?? []
                     let forecastViewController = AppDelegate.viewControllerInNav(ofType: WeatherViewController.self, in: self.window)
                     forecastViewController?.viewModels = viewModels
+                    forecastViewController?.locationBar.title = forecast?.timezone ?? ""
                     print(forecast)
                    
                 } catch {

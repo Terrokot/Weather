@@ -115,6 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="LOCATION" largeTitleDisplayMode="always" id="SBn-Fk-yZ0"/>
                     <connections>
+                        <outlet property="locationBar" destination="SBn-Fk-yZ0" id="YKP-9n-hVM"/>
                         <outlet property="tableView" destination="jUp-C1-gJp" id="UeD-Vo-4TR"/>
                     </connections>
                 </viewController>
