@@ -15,29 +15,34 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startPresentation()
+    }
+    
+    func startPresentation() {
+        
+        let userDefaults = UserDefaults.standard
+        let launchedBefore = userDefaults.bool(forKey: "launchedBefore")
+        if launchedBefore == false {
+            
+            // PageViewController
+            if let pageViewController = storyboard?.instantiateViewController(
+                withIdentifier: "PageViewController") as? PageViewController {
+                pageViewController.modalPresentationStyle = .fullScreen
+                self.present(pageViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
     var viewModels: [DailyForecastCellModel] = [] {
         didSet {
             tableView.reloadData()
         }
     }
-
-    
-    
-
-/*
-    let apiKey = "6571b4d1e6e40c1738783ad3c217c976"
-    let networkService = NetworkService()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //networkService.testrequest()
-    }
-
-*/
-// api.openweathermap.org/data/2.5/weather?q=Paris,&units=imperial&appid=6571b4d1e6e40c1738783ad3c217c976
 }
 
 extension WeatherViewController: UITableViewDelegate {
-    
 }
 
 extension WeatherViewController: UITableViewDataSource {
@@ -49,10 +54,8 @@ extension WeatherViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath) as! DailyForecastTableViewCell
         let vm = viewModels[indexPath.row]
         cell.forecastImageView.image = vm.image
-        cell.temperatureLabel.text = "\(vm.low) - \(vm.high)ºF"
+        cell.temperatureLabel.text = "\(vm.low - 32) - \(vm.high - 32)ºC"
         cell.dayLabel.text = vm.dayOfTheWeek
         return cell
     }
-    
-    
 }

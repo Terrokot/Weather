@@ -11,7 +11,7 @@
         <!--LOCATION-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WeatherViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,6 +121,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2021.7391304347827" y="83.967391304347828"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="f6g-aH-OEy">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="f2i-cF-4Pb" customClass="PageViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UR2-NJ-ES3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855" y="84"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="xmf-rV-EXi">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TJU-3M-LFI" customClass="TutorialViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ACM-CS-Ow9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhI-U5-tNr">
+                                <rect key="frame" x="30" y="358" width="354" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Fp-ZO-tWq">
+                                <rect key="frame" x="187.66666666666666" y="669" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.43917477129999999" green="0.43924182649999999" blue="0.43916010859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67525402607361962" green="0.82536529758588961" blue="0.95672699202269951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BhI-U5-tNr" firstAttribute="leading" secondItem="R3H-fg-D6g" secondAttribute="leading" constant="30" id="GDg-tP-SwQ"/>
+                            <constraint firstItem="R3H-fg-D6g" firstAttribute="bottom" secondItem="5Fp-ZO-tWq" secondAttribute="bottom" constant="30" id="ZA5-ab-eBr"/>
+                            <constraint firstItem="BhI-U5-tNr" firstAttribute="centerY" secondItem="ACM-CS-Ow9" secondAttribute="centerY" id="d9z-AK-xlC"/>
+                            <constraint firstItem="BhI-U5-tNr" firstAttribute="centerX" secondItem="ACM-CS-Ow9" secondAttribute="centerX" id="dGd-Iy-7Dz"/>
+                            <constraint firstItem="R3H-fg-D6g" firstAttribute="trailing" secondItem="BhI-U5-tNr" secondAttribute="trailing" constant="30" id="kWb-Jd-XRd"/>
+                            <constraint firstItem="5Fp-ZO-tWq" firstAttribute="centerX" secondItem="ACM-CS-Ow9" secondAttribute="centerX" id="vHy-hX-aVJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R3H-fg-D6g"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="5Fp-ZO-tWq" id="rUc-AN-MqZ"/>
+                        <outlet property="presentTextLabel" destination="BhI-U5-tNr" id="3Vd-ss-gwP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePm-Ft-y4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3539" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e1F-KM-g5V">

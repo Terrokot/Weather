@@ -27,7 +27,5 @@ extension DailyForecastCellModel {
         high = Int(dailyForecast.temperatureHigh)
         low = Int(dailyForecast.temperatureLow)
         image = UIImage(named: dailyForecast.icon)
-
-        
     }
 }
