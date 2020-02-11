@@ -2,13 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IGL-U8-seI">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LOCATION-->
+        <!--LOADING-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WeatherViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LOCATION" largeTitleDisplayMode="always" id="SBn-Fk-yZ0"/>
+                    <navigationItem key="navigationItem" title="LOADING" largeTitleDisplayMode="always" id="SBn-Fk-yZ0"/>
                     <connections>
                         <outlet property="locationBar" destination="SBn-Fk-yZ0" id="YKP-9n-hVM"/>
                         <outlet property="tableView" destination="jUp-C1-gJp" id="UeD-Vo-4TR"/>

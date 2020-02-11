@@ -78,34 +78,18 @@
 		9111E0BD23F20A1600CE4C29 /* TutorialScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9111E0BE23F20A2700CE4C29 /* Model */,
-				9111E0BF23F20A3600CE4C29 /* View */,
-				9111E0C023F20A3C00CE4C29 /* Controller */,
+				9111E0C023F20A3C00CE4C29 /* Controllers */,
 			);
 			path = TutorialScreen;
 			sourceTree = "<group>";
 		};
-		9111E0BE23F20A2700CE4C29 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9111E0BF23F20A3600CE4C29 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9111E0C023F20A3C00CE4C29 /* Controller */ = {
+		9111E0C023F20A3C00CE4C29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				9111E0C123F20A9800CE4C29 /* PageViewController.swift */,
 				9111E0BB23F209D400CE4C29 /* TutorialViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		91828C8E23EB379700C32234 /* Helpers */ = {

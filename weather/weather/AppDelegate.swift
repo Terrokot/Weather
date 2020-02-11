@@ -31,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self?.locationService.getLocation()
             }
         }
-        
         switch locationService.status {
         case .notDetermined:
             locationService.getPermission()
