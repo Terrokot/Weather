@@ -14,8 +14,8 @@ class TutorialViewController: UIViewController {
     @IBOutlet var pageControl: UIPageControl!
     
     var presentText = ""
-    var currentPage = 0
     var numberOfPages = 0
+    var currentPage = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -44,9 +44,6 @@ class WeatherViewController: UIViewController {
    
 }
 
-extension WeatherViewController: UITableViewDelegate {
-}
-
 extension WeatherViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModels.count

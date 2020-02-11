@@ -10,7 +10,7 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
-    let presentScreenContents = ["We need you location to show weather. If you dismiss you should do Settings -> Privacy -> Location Services and click allow while using app", "I hope you enjoy my app. \n Have a nice day 😉", ""]
+    let presentScreenContents = ["We need you location to show weather. If you dismiss you should go Settings -> Privacy -> Location Services and click allow while using app", "I hope you enjoy my app. \n Have a nice day 😉", ""]
     
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class PageViewController: UIPageViewController {
         guard index >= 0 else {
             return nil
         }
-        guard index < presentScreenContents.count else {
+        guard index <= 2  else {
             let userDefaults = UserDefaults.standard
             userDefaults.set(true, forKey: "launchedBefore")
             dismiss(animated: false, completion: nil)
