@@ -22,6 +22,20 @@ class WeatherViewController: UIViewController {
            }
        }
     
+    override func viewWillLayoutSubviews() {
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "back3")?.draw(in: self.view.bounds)
+
+        if let image = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image)
+        }else{
+            UIGraphicsEndImageContext()
+            debugPrint("Image not available")
+         }
+        tableView.backgroundColor = .clear
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startPresentation()
@@ -51,6 +65,7 @@ extension WeatherViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath) as! DailyForecastTableViewCell
         let vm = viewModels[indexPath.row]
+        cell.backgroundColor = .clear
         cell.forecastImageView.image = vm.image
         cell.temperatureLabel.text = "\(vm.low - 32) ... \(vm.high - 32)ºC"
         cell.dayLabel.text = vm.dayOfTheWeek
