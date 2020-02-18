@@ -1,6 +1,15 @@
 # Weather
 
-Simple app using Darksky(Wheather API) to display week weather forecast for your location
+App using Darksky wheather API(https://darksky.net/) to display week weather forecast for your location
+***
+
+When you start the application for the first time, will be shown the tutorial presentation(PageViewController)
+Also will be requested access to geolocation.
+
+Next, user can see loading screen (while waiting for loading data) or immediately get to the weather forecats screen.
+***
+Stack: 
+Swift, Alamofire, Moya, MVC Architecture
 
 ***
 
