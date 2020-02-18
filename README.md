@@ -9,7 +9,7 @@ Also will be requested access to geolocation.
 Next, user can see loading screen (while waiting for loading data) or immediately get to the weather forecats screen.
 ***
 Stack: 
-Swift, Alamofire, Moya, MVC Architecture
+*Swift, Alamofire, Moya, MVC Architecture
 
 ***
 
